@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Yongqian Wen - Resume</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* ===========================
+       Base Layout & Typography
+       =========================== */
+    :root {
+      --accent-color: #1f4f7b;
+      --text-color: #222222;
+      --muted-text: #555555;
+      --border-color: #dddddd;
+      --background-color: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: var(--text-color);
+      background-color: #f2f2f2;
+      line-height: 1.5;
+    }
+
+    body {
+      padding: 1.5rem;
+    }
+
+    .cv-wrapper {
+      max-width: 960px;
+      margin: 0 auto;
+      background-color: var(--background-color);
+      padding: 2rem 2.5rem;
+      box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.08);
+      border-radius: 0.5rem;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        padding: 0.5rem;
+      }
+
+      .cv-wrapper {
+        padding: 1.5rem 1.25rem;
+        border-radius: 0;
+        box-shadow: none;
+      }
+    }
+
+    /* ===========================
+       Header
+       =========================== */
+    header {
+      border-bottom: 2px solid var(--border-color);
+      padding-bottom: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    header h1 {
+      margin: 0 0 0.25rem 0;
+      font-size: 2rem;
+      letter-spacing: 0.03em;
+    }
+
+    .location {
+      font-size: 0.95rem;
+      color: var(--muted-text);
+      margin-bottom: 0.4rem;
+    }
+
+    .contact-info {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem 1rem;
+      font-size: 0.95rem;
+    }
+
+    .contact-info a {
+      color: var(--accent-color);
+      text-decoration: none;
+    }
+
+    .contact-info a:hover,
+    .contact-info a:focus {
+      text-decoration: underline;
+    }
+
+    /* ===========================
+       Sections
+       =========================== */
+    main {
+      margin-top: 1rem;
+    }
+
+    section {
+      margin-bottom: 1.5rem;
+    }
+
+    .section-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--accent-color);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin: 0 0 0.75rem 0;
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 0.35rem;
+    }
+
+    /* ===========================
+       Education
+       =========================== */
+    .education-entry {
+      margin-bottom: 0.75rem;
+    }
+
+    .edu-header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 0.25rem;
+      font-weight: 600;
+    }
+
+    .edu-degree {
+      font-weight: 500;
+    }
+
+    .edu-dates {
+      font-size: 0.9rem;
+      color: var(--muted-text);
+    }
+
+    .edu-details {
+      font-size: 0.95rem;
+      margin-top: 0.25rem;
+    }
+
+    .edu-details span.label {
+      font-weight: 500;
+    }
+
+    /* ===========================
+       Skills
+       =========================== */
+    .skills-group {
+      margin-bottom: 0.5rem;
+      font-size: 0.95rem;
+    }
+
+    .skills-label {
+      font-weight: 600;
+      margin-right: 0.25rem;
+    }
+
+    /* ===========================
+       Experience & Projects
+       =========================== */
+    .item {
+      margin-bottom: 1rem;
+    }
+
+    .item-header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 0.25rem;
+    }
+
+    .item-title-role {
+      font-weight: 600;
+    }
+
+    .item-org-location {
+      font-size: 0.95rem;
+      color: var(--muted-text);
+    }
+
+    .item-dates {
+      font-size: 0.9rem;
+      color: var(--muted-text);
+    }
+
+    .item-subtitle {
+      font-size: 0.95rem;
+      color: var(--muted-text);
+    }
+
+    ul.bullets {
+      margin: 0.35rem 0 0 1.25rem;
+      padding: 0;
+      font-size: 0.95rem;
+    }
+
+    ul.bullets li {
+      margin-bottom: 0.25rem;
+    }
+
+    /* ===========================
+       Misc
+       =========================== */
+    @media print {
+      body {
+        background-color: #ffffff;
+        padding: 0;
+      }
+
+      .cv-wrapper {
+        box-shadow: none;
+        border-radius: 0;
+        margin: 0;
+        width: 100%;
+        max-width: 100%;
+        padding: 1in;
+      }
+
+      a {
+        color: #000000;
+        text-decoration: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="cv-wrapper">
+    <header>
+      <h1>Yongqian Wen</h1>
+      <p class="location">Boston, MA</p>
+      <div class="contact-info">
+        <!-- Update this phone number if it changes -->
+        <span><a href="tel:+17812497019">(781) 249-7019</a></span>
+        <!-- Update this email address if it changes -->
+        <span><a href="mailto:yongqianwen@gmail.com">yongqianwen@gmail.com</a></span>
+        <span><a href="https://www.linkedin.com/in/yongqianwen/" target="_blank" rel="noopener noreferrer">LinkedIn: yongqianwen</a></span>
+      </div>
+    </header>
+
+    <main>
+      <!-- Start Education Section -->
+      <section aria-label="Education">
+        <h2 class="section-title">Education</h2>
+
+        <div class="education-entry">
+          <div class="edu-header">
+            <div>
+              <div>Suffolk University, Sawyer Business School</div>
+              <div class="edu-degree">Master of Science in Business Analytics</div>
+            </div>
+            <div class="edu-dates">Jan 2025 – Dec 2026</div>
+          </div>
+          <p class="edu-details">
+            <span class="label">Relevant Courses:</span>
+            Data Analytics with Python, Enterprise Data Management, Investment Analysis
+          </p>
+        </div>
+
+        <div class="education-entry">
+          <div class="edu-header">
+            <div>
+              <div>Suffolk University, Sawyer Business School</div>
+              <div class="edu-degree">Bachelor of Science in Big Data and Business Analytics</div>
+            </div>
+            <div class="edu-dates">Sep 2022 – Dec 2024</div>
+          </div>
+          <p class="edu-details">
+            <span class="label">Relevant Courses:</span>
+            Cloud Computing and Network Infrastructure, Coding for Business, Big Data, BI and Analytics, Sports Analytics in Action, Database Management, Applied Stats &amp; Pred Analytics, Applied Econometrics, Strategic Management
+          </p>
+        </div>
+      </section>
+
+      <!-- Start Skills Section -->
+      <section aria-label="Skills">
+        <h2 class="section-title">Skills</h2>
+
+        <div class="skills-group">
+          <span class="skills-label">Proficient:</span>
+          Python, SQL, R, Microsoft Office (Excel, PowerPoint, and Access), Microsoft CRM system, Power BI, Tableau, SPSS
+        </div>
+        <div class="skills-group">
+          <span class="skills-label">Knowledge of:</span>
+          SAP S/4HANA, AWS Cloud Service, Crayon
+        </div>
+        <div class="skills-group">
+          <span class="skills-label">Languages:</span>
+          Bilingual in Mandarin and English
+        </div>
+      </section>
+
+      <!-- Start Experience Section -->
+      <section aria-label="Professional Experience">
+        <h2 class="section-title">Professional Experience</h2>
+
+        <article class="item">
+          <div class="item-header">
+            <div>
+              <div class="item-title-role">New Business Opportunities Analyst</div>
+              <div class="item-org-location">Independent Retailers Shared Services Cooperative &mdash; Kingston, NH</div>
+            </div>
+            <div class="item-dates">Jan 2025 – May 2025</div>
+          </div>
+          <ul class="bullets">
+            <li>Researched and reported on emerging retail product opportunities (apple juice and butcher shops) within the food industry across New England and global markets.</li>
+            <li>Presented marketing research findings for apple juice in Maine in both oral and written form and developed Excel sheets with advanced analytics to directly support report presentations.</li>
+            <li>Collaborated directly with the Founder and Executive Director on a project-by-project basis.</li>
+          </ul>
+        </article>
+
+        <article class="item">
+          <div class="item-header">
+            <div>
+              <div class="item-title-role">Competitive Intelligence Intern</div>
+              <div class="item-org-location">Tyler Technologies &mdash; Yarmouth, ME</div>
+            </div>
+            <div class="item-dates">June 2024 – August 2024</div>
+          </div>
+          <ul class="bullets">
+            <li>Addressed challenges of adapting to U.S. corporate work culture and mastering Microsoft CRM tools by actively collaborating with supervisors and quickly learning required technologies.</li>
+            <li>Conducted data searches using Curate and updated findings in Microsoft CRM and Crayon, providing actionable intelligence on permitting software, ERP, and community development opportunities.</li>
+            <li>Generated reports on OpenGov and Workday and presented findings using Tableau, earning praise from senior management and directly supporting the successful acquisition of six project bids.</li>
+          </ul>
+        </article>
+
+        <article class="item">
+          <div class="item-header">
+            <div>
+              <div class="item-title-role">Project Manager</div>
+              <div class="item-org-location">IterateUX &mdash; Boston, MA</div>
+            </div>
+            <div class="item-dates">June 2021 – November 2021</div>
+          </div>
+          <ul class="bullets">
+            <li>Oversaw company logo design and Spotify channel creation while navigating the complexities of remote project management.</li>
+            <li>Collaborated with international graphic designers through six logo design iterations and launched a Spotify channel that significantly increased listener engagement, peaking at 67+ listeners per episode.</li>
+          </ul>
+        </article>
+
+        <article class="item">
+          <div class="item-header">
+            <div>
+              <div class="item-title-role">Intern, Internal Bond Trading Division</div>
+              <div class="item-org-location">Essence Securities Co., Ltd. &mdash; Beijing, China</div>
+            </div>
+            <div class="item-dates">November 2020 – January 2021</div>
+          </div>
+          <ul class="bullets">
+            <li>Assisted supervisors in managing daily operations, including data entry, Excel sheet management, and logistical tasks in a high-pressure environment.</li>
+            <li>Adapted to the demands of the Chinese financial work culture while gaining valuable insights into internal bond trading operations.</li>
+          </ul>
+        </article>
+
+        <article class="item">
+          <div class="item-header">
+            <div>
+              <div class="item-title-role">Cofounder</div>
+              <div class="item-org-location">F.E.I. Technologies LLC &mdash; Syracuse, NY</div>
+            </div>
+            <div class="item-dates">December 2018 – October 2019</div>
+          </div>
+          <ul class="bullets">
+            <li>Founded and managed a delivery service targeting local Asian restaurants, developing an app to streamline ordering processes.</li>
+            <li>Overcame challenges with contract management and technical delays by building entrepreneurial and project management skills.</li>
+            <li>Secured funding through the Student Entrepreneurs New York Business Plan Competition and scaled operations to over 100 daily orders during peak periods.</li>
+          </ul>
+        </article>
+      </section>
+
+      <!-- Start Projects Section -->
+      <section aria-label="Projects">
+        <h2 class="section-title">Projects</h2>
+
+        <article class="item">
+          <div class="item-header">
+            <div>
+              <div class="item-title-role">Celtics Competitive Intelligence Case Study</div>
+              <div class="item-subtitle">Suffolk University</div>
+            </div>
+            <div class="item-dates">September 2023 – December 2023</div>
+          </div>
+          <ul class="bullets">
+            <li>Analyzed market competition and presented insights on barriers to entry, product differentiation, and diversification strategies for a major retail brand.</li>
+            <li>Utilized Tableau and SPSS for data visualization and reporting, delivering actionable recommendations to improve competitive positioning.</li>
+          </ul>
+        </article>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
